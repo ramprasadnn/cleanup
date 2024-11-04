@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Repository
+metadata:
+  name: my-repo
+spec:
+  format: maven2
+  type: hosted
+  attributes:
+    storage:
+      blobStoreName: default
+      strictContentTypeValidation: true
+    cleanup:
+      policyNames: ["string"]
+    maven:
+      versionPolicy: RELEASE
+      layoutPolicy: STRICT
